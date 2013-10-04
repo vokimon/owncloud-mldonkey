@@ -1,0 +1,21 @@
+#app
+{
+	padding: 4px;
+}
+
+#app h1
+{
+	font-weight: bold;
+	color: #004;
+	font-size: 150%;
+	padding-top: 1ex;
+}
+
+table th
+{
+	background-color: #ccf;
+}
+table tr:nth-child(odd)
+{
+	background-color: #eef;
+}
