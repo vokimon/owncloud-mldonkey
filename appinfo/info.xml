@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<info>
+	<id>mldonkey</id>
+	<name>MLDonkey</name>
+	<description>Controlling an MLDonkey server for hosted P2P file sharing</description>
+	<version>0.1</version>
+	<licence>AGPL</licence>
+	<author>David García Garzón</author>
+	<require>4</require>
+</info>
