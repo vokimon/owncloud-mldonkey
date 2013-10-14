@@ -32,4 +32,24 @@ $this->create('mldonkey_index', '/')->action(
 	}
 );
 
+$this->create('mldonkey_ajax_gettransfers', '/transfers')->post()->action(
+	function($params){
+//		\OCP\Util::writeLog('mldonkey', "router Transfers", \OCP\Util::WARN);
+		App::main('MLDonkeyController', 'transfers', $params, new DIContainer());
+	}
+);
+
+$this->create('mldonkey_ajax_getsearches', '/searches')->post()->action(
+	function($params){
+//		\OCP\Util::writeLog('mldonkey', "router Results", \OCP\Util::WARN);
+		App::main('MLDonkeyController', 'searches', $params, new DIContainer());
+	}
+);
+
+$this->create('mldonkey_ajax_getresults', '/results/{searchid}')->post()->action(
+	function($params){
+//		\OCP\Util::writeLog('mldonkey', "router Results", \OCP\Util::WARN);
+		App::main('MLDonkeyController', 'results', $params, new DIContainer());
+	}
+);
 

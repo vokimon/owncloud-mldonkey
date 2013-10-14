@@ -1,52 +1,51 @@
 {{ script('app') }}
 {{ style('style') }}
 {{ style('font-awesome','3rdparty/fontawesome') }}
+{{ style('../3rdparty/jquery.jqGrid-4.5.4/css/ui.jqgrid') }}
+{{ script('../3rdparty/jquery.jqGrid-4.5.4/js/jquery.jqGrid.src') }}
+{{ script('../3rdparty/jquery.jqGrid-4.5.4/js/i18n/grid.locale-en') }}
 
 <div id='app'>
+<div class="content">
 
-<span class='error'>
-No way!
-</span>
+<div id='rsperror'></div>
+<div id='jgriderrors'></div>
+
+<div id='mldonkey_tabs'>
+
+<ul>
+<li><a href='#mldonkey_searchform'>Search Launcher</a></li>
+<li><a href='#mldonkey_transfers'>Transfers</a></li>
+<li><a href='#mldonkey_searches'>Search results</a></li>
+</ul>
+
+<div id='mldonkey_transfers'>
+<table id='mldonkey_transfers_grid'  style='width:100%'>
+</table>
+<div id='mldonkey_transfers_pager'> </div>
+</div> <!-- mldonkey_dummy -->
 
 
-<h1>Search</h1>
-<form>
-	<input style='width: 50%' name='query' placeholder='Type search keywords or a link (e2k, torrent...)' >
+<div id='mldonkey_searchform'>
+<form action='results/2' method='post' >
+	<input id='search-query' name='search-query'
+		placeholder='Search keywords, ed2k links, torrent links, urls...'/ >
 	<input type='submit' />
 </form>
+</div><!-- mldonkey_searchform -->
+
+<div id='mldonkey_searches'>
+<table id='mldonkey_searches_grid' style='width:100%'></table>
+<div id='mldonkey_searches_pager'> </div>
+
+<table id='mldonkey_results_grid' style='width:100%'></table>
+<div id='mldonkey_results_pager'> </div>
+
+</div> <!-- mldonkey_searches -->
 
 
-<h1>Search Results</h1>
+</div> <!-- mldonkey_tabs -->
 
-<div id='mldonkey-results'>
-<table width='100%'>
-<tr><th>Kind</th><th>Query</th><th>Results</th></tr>
-<tr><td><i title='Ongoing' class='icon-cog'></i> Donkey</td><td>starwars</td><td>34</td></tr>
-<tr><td><i title='Finished' class='icon-ok'></i> Donkey</td><td>sobrinus</td><td>144</td></tr>
-<tr><td><i title='Error' class='icon-exclamation-sign'></i> Donkey</td><td>a weird thing</td><td>532</td></tr>
-<tr><td><i title='Done' class='icon-ok'></i> Donkey</td><td>dr who</td><td>552</td></tr>
-</table>
-</div>
-
-<h1>Transfers</h1>
-
-<div id='mldonkey-transfers'>
-<table width='100%'>
-<tr><th>Filename</th><th>Progress</th><th>Peers</th><th>Size</th></tr>
-</table>
-</div>
-
-<h1>Shares</h1>
-<div id='mldonkey-results'>
-
-<table width='100%'>
-<tr>
-<th>Status</th><th>Kind</th><th>Query</th><th>Results</th>
-</tr>
-</table>
-</div>
-
-
-
-</div>
+</div> <!-- content -->
+</div> <!-- app -->
 

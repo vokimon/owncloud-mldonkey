@@ -1,21 +1,35 @@
 #app
 {
-	padding: 4px;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
-#app h1
+#app .content
 {
-	font-weight: bold;
-	color: #004;
-	font-size: 150%;
-	padding-top: 1ex;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
-table th
+#mldonkey-searchform
 {
-	background-color: #ccf;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
-table tr:nth-child(odd)
+
+#mldonkey_searchform form
 {
-	background-color: #eef;
+	text-align: center;
+}
+#mldonkey_searchform input#search-query
+{
+	width: 90%;
+}
+
+tr.ui-widget-content.ui-state-highlight
+{
+	background: #6d3;
+	color: white;
 }
