@@ -21,9 +21,9 @@ An Owncloud application to interact with the mldonkey server.
 - mldonkey stories
   - Retrieve the ongoing transfers for a given user
   - Transfer operations
-    - Pause
-    - Cancel
-    - Rename file
+      - Pause
+      - Cancel
+      - Rename file
   - Launch a search
   - List searches
   - List search results
